@@ -9,18 +9,18 @@ import com.classes_pet.entities.Endereco;
 @Service
 public class EnderecoService {
 
-	private final PetRepository petRepository;
+	private final EnderecoRepository enderecoRepository;
 	
 	
-	public PetService(PetRepository petRepository) {
-		this.petRepository = petRepository;
+	public EnderecoService(PetRepository petRepository) {
+		this.enderecoRepository = petRepository;
 	}
 	
-	public Endereco savePet (Endereco endereco) {
-		return petRepository.save(endereco);
+	public Endereco saveEndereco (Endereco endereco) {
+		return enderecoRepository.save(endereco);
 	}
 	
-	public Endereco getPetById(Long id) {
+	public Endereco getEnderecoById(Long id) {
 		return enderecoRepository.findById(id).orElse(null);
 	}
 	
